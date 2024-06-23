@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.top-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+.grid-container {
+    font-size: 0; /* Remove white space between inline-block elements */
+    text-align: center; /* Center align items horizontally */
+}
+
+.grid-item {
+    display: inline-flexbox;
+    width: calc(33.33% - 20px); /* Adjust width based on number of items per row and gap */
+    margin: 10px; /* Adjust margin between items */
+    vertical-align: top; /* Align items at the top */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.bottom-section {
+    text-align: center;
+}
+
+.bottom-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for header, content sections, carousel, etc. */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .glide__slides {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .glide__slide {
+        width: 100%; /* Display one slide per row on smaller screens */
+    }
+}
